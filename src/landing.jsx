@@ -72,6 +72,10 @@ const Landing = () => {
 
     const detectLocation = () => {
         setWeatherError('')
+        if (!window.isSecureContext) {
+            setWeatherError('Location access requires a secure HTTPS connection')
+            return
+        }
         if (!navigator.geolocation) {
             setWeatherError('Geolocation is not supported by your browser')
             return
@@ -89,12 +93,18 @@ const Landing = () => {
                 }
             },
             (error) => {
-                setWeatherError(error.code === error.PERMISSION_DENIED
-                    ? 'Location permission was denied'
-                    : 'Unable to access your location')
+                if (error.code === error.PERMISSION_DENIED) {
+                    setWeatherError('Location permission was denied. Allow location access in your browser settings and try again.')
+                } else if (error.code === error.POSITION_UNAVAILABLE) {
+                    setWeatherError('Your location is unavailable. Check that location services are enabled on your device.')
+                } else if (error.code === error.TIMEOUT) {
+                    setWeatherError('Location request timed out. Check your device location services and try again.')
+                } else {
+                    setWeatherError('Unable to access your location')
+                }
                 setIsLoadingWeather(false)
             },
-            { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
+            { enableHighAccuracy: false, timeout: 30000, maximumAge: 60000 }
         )
     }
 

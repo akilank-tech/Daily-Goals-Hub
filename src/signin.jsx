@@ -50,13 +50,13 @@ const Signup = (props) => {
         navigate('/')
     }
     return (
-        <div className="min-h-screen bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 flex items-center justify-center p-4 sm:p-8 lg:p-12 overflow-hidden">
+        <div className="h-dvh bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 flex items-center justify-center p-4 sm:p-8 lg:p-12 overflow-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 left-1/4 w-72 h-72 bg-teal-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
             <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-mint-300/40 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
             <div className="absolute top-1/4 left-1/3 w-64 h-64 bg-teal-400/30 rounded-full mix-blend-multiply filter blur-xl opacity-40 animate-blob animation-delay-4000"></div>
 
-            <div className="relative z-10 w-full sm:max-w-md lg:max-w-lg bg-cream-50 border border-teal-200/50 rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 text-center transition-all duration-300 hover:shadow-teal-600/20">
+            <div className="relative z-10 w-full max-h-full overflow-y-auto overscroll-contain sm:max-w-md lg:max-w-lg bg-cream-50 border border-teal-200/50 rounded-3xl shadow-2xl p-6 sm:p-8 lg:p-12 text-center transition-all duration-300 hover:shadow-teal-600/20">
                 <div className="mb-6 sm:mb-8">
                     <h1 className="text-3xl sm:text-5xl font-bold text-teal-900 mb-2 tracking-tight">Create Account</h1>
                     <p className="text-teal-700 text-sm sm:text-base">Join us and start managing your activities</p>
