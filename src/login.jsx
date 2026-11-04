@@ -44,7 +44,7 @@ const Login=(props)=>{
             }   
     }
     return(
-        <div className="min-h-screen bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 flex items-center justify-center p-4 sm:p-8 lg:p-12 overflow-hidden">
+        <div className="min-h-dvh bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 flex items-center justify-center p-4 sm:p-8 lg:p-12 overflow-x-hidden">
             {/* Decorative background elements */}
             <div className="absolute top-0 left-1/4 w-72 h-72 bg-teal-500/30 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob"></div>
             <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-mint-300/40 rounded-full mix-blend-multiply filter blur-xl opacity-60 animate-blob animation-delay-2000"></div>
