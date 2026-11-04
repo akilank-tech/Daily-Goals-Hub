@@ -137,7 +137,7 @@ const Landing = () => {
                     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                         <div className="flex items-center justify-between h-16 sm:h-20">
                             <div className="flex items-center gap-2 sm:gap-3">
-                                <span className="text-xl sm:text-2xl font-bold text-teal-800 tracking-tight">Daily Goals Hub</span>
+                                <span className="text-2xl sm:text-3xl font-extrabold text-teal-800 tracking-tight">Daily Goals Hub</span>
                             </div>
                             <button
                                 onClick={() => navigate('/')}
